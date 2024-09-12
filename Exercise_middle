@@ -1,0 +1,36 @@
+
+public class Exercise {
+    public static int[] middle(int[] array) {
+        
+        if (array.length==2)
+        {
+            System.out.println("the size of the array must be more than 2");
+        }
+        // else if(array.lenght%2 == 0)
+        // {
+            int[]arr = new int[array.length-2];
+            for(int i=1; i<array.length-1; i++)
+            {
+                arr[i-1]=array[i];
+            }
+            return arr;
+        // }
+    }
+    public static void main(String[]args)
+    {
+        int[] midele = {1, 2, 3, 4};
+        // Exercise obj = new Exercise();
+        int[] mid = Exercise.middle(midele);
+        System.out.println(java.util.Arrays.toString(mid));
+        
+    }
+    // public static int appendele(int ele)
+    // {
+        // 
+        // for(int i=1; i<arr.length-1; i++)
+        // {
+            // arr[i]=array[i];
+        // }
+        
+    // }
+}
