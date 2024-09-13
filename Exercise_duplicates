@@ -15,7 +15,7 @@ public class Exercise {
     {
         arra[index++]=num;
     }
-    return result;
+    return arra;
   }
     public static void main(String[]args)
     {
