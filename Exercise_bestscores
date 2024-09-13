@@ -1,0 +1,38 @@
+import java.util.HashSet;
+
+public class Exercise {
+  public static int[] findTopTwoScores(int[] array) {
+        // Initialize variables to hold the first and second highest scores
+        Integer first = null;
+        Integer second = null;
+
+        // Use a HashSet to keep track of unique scores
+        HashSet<Integer> uniqueScores = new HashSet<>();
+
+        // Iterate over the array
+        for (int score : array) {
+            // Add to the set to ensure unique scores
+            if (uniqueScores.add(score)) {
+                // If 'first' is not set or score is higher than 'first'
+                if (first == null || score > first) {
+                    // Update second before updating first
+                    second = first;
+                    first = score;
+                } 
+                // If 'second' is not set or score is higher than 'second' and less than 'first'
+                else if (second == null || score > second) {
+                    second = score;
+                }
+            }
+        }
+
+        // Return the result in an array
+        return new int[] {first, second};
+    }
+
+    public static void main(String[] args) {
+        int[] myArray = {84, 85, 86, 87, 85, 90, 85, 83, 23, 45, 84, 1, 2, 0};
+        int[] result = findTopTwoScores(myArray);
+        System.out.println("First and second best scores: " + result[0] + ", " + result[1]);
+    }
+}
