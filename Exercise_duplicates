@@ -1,0 +1,26 @@
+import java.util.HashSet;
+import java.util.Arrays;
+public class Exercise {
+  public static int[] removeDuplicates(int[] arr) {
+      //creating a HashSet
+    HashSet<Integer> set = new HashSet<>();
+    for (int num : arr)
+    {
+        set.add(num);
+    }
+    //creating an array
+    int[] arra = new int[set.size()];
+    int index = 0;
+    for(int num : set)//number takes each number from the set 
+    {
+        arra[index++]=num;
+    }
+    return result;
+  }
+    public static void main(String[]args)
+    {
+        int[] array = {1, 1, 2, 2, 3, 4, 5};
+        int ele[] = Exercise.removeDuplicates(array);
+        System.out.println(ele);
+    }
+}
