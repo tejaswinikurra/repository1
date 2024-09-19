@@ -1,0 +1,62 @@
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+class Exercise
+{
+    public static void main(String[]arg)
+    {
+        ArrayList<Integer> num = new<Integer> ArrayList(Arrays.asList(10, 20, 30, 40, 50, 60));
+        num.remove("20"); 
+        System.out.println(num);
+        int tar = 70;
+    //searching for an element
+        for(int lal:num)
+        {
+            if (lal==tar)
+            {
+                System.out.println("the element is found");
+                break;
+            }
+        }
+    //finding the index of the target
+        for(int i=0; i<num.size(); i++)
+        {
+            if(num.get(i)==tar)
+            {
+                System.out.println("the target element is found at the index" + i);
+            }
+        }
+    //creating arraylist
+        ArrayList<Integer> nums = new ArrayList<Integer>();
+    //inserting elements
+        nums.add(1);
+        nums.add(2);
+        nums.add(3);
+        nums.add(4);
+        nums.add(5);
+    //iteration with for loop
+        for(int i=0; i<nums.size(); i++)
+        {
+            System.out.println(nums.get(i));
+        }
+    //iteration with for each loop
+        for(int dig:nums)
+        {
+            System.out.println(dig);
+        }
+        System.out.println(nums);
+    //iteration using iteration method
+        Iterator iterator = nums.iterator();
+        while(iterator.hasNext())
+        {
+            System.out.println(iterator.next());
+        }
+    //insertion of elements
+        ArrayList<String> string = new ArrayList<String>();
+        string.add("A");
+        string.add("B");
+        System.out.println(strin g);
+    //accessing elements
+        System.out.println(string.get(0));
+    }
+}
