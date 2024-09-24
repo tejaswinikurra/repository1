@@ -6,11 +6,11 @@ public class SinglyLinkedList {
   public Node createSinglyLinkedList(int nodeValue) {
     head = new Node();// creating an object but not requried as we can create one object and use it for both 
     Node node = new Node();// creating an object 
-    node.next = null;
-    node.value = nodeValue;
-    head = node;
-    tail = node;
-    size = 1;
+    node.next = null;// next is null
+    node.value = nodeValue;// assign a value
+    head = node;// head points to this node
+    tail = node;// tail points to this node
+    size = 1;//update size
     return head;
   }
 
