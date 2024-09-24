@@ -4,8 +4,8 @@ public class SinglyLinkedList {
   public int size;
 
   public Node createSinglyLinkedList(int nodeValue) {
-    head = new Node();
-    Node node = new Node();
+    head = new Node();// creating an object but not requried as we can create one object and use it for both 
+    Node node = new Node();// crearting an object 
     node.next = null;
     node.value = nodeValue;
     head = node;
