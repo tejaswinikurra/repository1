@@ -1,0 +1,23 @@
+class Solution {
+    public static boolean isPalindrome(int x) {
+    int ori = x;
+    int rev = 0;
+    while(x<0)
+    {
+        return false;
+    }
+    while(x>0)
+    {
+        int n = x%10;
+        rev = rev*10+n;
+        x = x/10;
+    }
+    return ori == rev;
+    }
+    public static void main(String[]args)
+    {
+        // Solution obj = new obj();
+        int ans = 121;
+        System.out.println(isPalindrome(ans));
+    }
+}
