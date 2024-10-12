@@ -4,7 +4,7 @@ class Array
     public Array(int sizeofarr)
     {
         arr = new int[sizeofarr];
-        for(i=0; i<len.arr; i++)
+        for(i=0; i<arr.length; i++)
         {
             arr[i]=Integer.MIN_VALUE;
         }
@@ -23,7 +23,9 @@ class Array
             }
             }
             catch(ArrayIndexOutOfBoundsException e){
-                System.out.println("the index is out of bounds");
+                System.out.println("the index is out of bounds");/*The exception message "the cell is already occupied" in your code will be printed
+                                                                   when you try to insert a number into an array position (address) that already contains 
+                                                                   a value other than Integer.MIN_VALUE*/
             }
         }
     public static void main(String[]args)
