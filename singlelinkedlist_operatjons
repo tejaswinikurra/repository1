@@ -18,6 +18,7 @@ public class SinglyLinkedList {
   public void insertInLinkedList(int nodeValue, int location) {
     Node node = new Node();
     node.value = nodeValue;
+    //algorithm for inserting a node at the end(the linked list is empty)
     if (head == null) {
       createSinglyLinkedList(nodeValue);
       return;
@@ -27,7 +28,7 @@ public class SinglyLinkedList {
       node.next = head;
       head = node;
     }
-    // algorithm for inserting a element in the ending 
+    // algorithm for inserting a element in the end(the linked list is not empty) 
     else if (location >= size) {
       node.next = null;
       tail.next = node;
