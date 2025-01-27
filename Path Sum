@@ -1,0 +1,38 @@
+class Treenode{
+    int val;
+    Treenode left = null;
+    Treenode right = null;
+    public Treenode(int val){
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+    class Solution{
+        public boolen hasPathSum(Treenode node, int targetsum){
+            if(node == null)
+            {
+                return false;
+                if(left == null && right == null && node == targetsum)
+                {
+                    return true;
+                }
+            int sum = targetsum-node;
+            return (root.left, sum) || (root.right, sum)
+        }
+        public static void main(String[]args)
+        {
+            Treenode root = new Treenode(5);
+            root.left(4);
+            root.right(8);
+            root.left.left(11);
+            root.left.left.right(2);
+            root.left.left.left(7);
+            root.rigth.left(13);
+            root.right.right(4);
+            root.right.right.right(1);
+            Solution obj = new Solution();
+            boolean res = obj.hasPathSum(root, 22);
+            System.out.println(res);
+        }
+    }
+}
