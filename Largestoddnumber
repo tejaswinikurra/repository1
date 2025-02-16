@@ -1,0 +1,26 @@
+class Solution {
+    public String largestOddNumber(String num) {
+        int n = num.length();
+        int b = num.length()-1;
+        // int c = 0;
+        if(num.charAt(0)%2 != 0 && num.charAt(b)%2 != 0)
+            {
+                return num;
+            }
+        for(int i=n-1; i>=0; i--)
+        {
+            if((num.charAt(i)-'0')%2 != 0)
+            {
+                return num.substring(0, i+1);
+            }   
+        }
+        return "";
+    }
+    public static void main(String[]args)
+    {
+        Solution obj = new Solution();
+        String num = "52";
+        String res = obj.largestOddNumber(num);
+        System.out.println(res);
+    }
+}
